@@ -1,0 +1,6 @@
+ARG NODE_VERSION
+FROM node:${NODE_VERSION}
+
+WORKDIR /usr/src/
+
+RUN apt update

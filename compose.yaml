@@ -1,0 +1,51 @@
+services:
+  nginx:
+    build: 
+      context: ./
+      dockerfile: ./container/img-server/Dockerfile
+    container_name: img-server
+    ports:
+      - "8081:80"
+    volumes:
+      - ./src/img/:/usr/share/nginx/html/k-ryouri-img
+
+  db:
+    build:
+      args:
+        - MYSQL_VERSION=latest
+      context: ./
+      dockerfile: ./container/db/Dockerfile
+    container_name: db
+    ports:
+      - "3306:3306"
+    env_file:
+      - ./container/db/.env
+    volumes:
+      - ./src/db/:/usr/src
+
+  crawler:
+    build:
+      args:
+        - PYTHON_VERSION=latest
+      context: ./
+      dockerfile: ./container/crawler/Dockerfile
+    container_name: crawler
+    volumes:
+      - ./src/crawler/:/usr/src/
+    tty: true
+
+  web:
+    build:
+      args:
+        - NODE_VERSION=latest
+      context: ./
+      dockerfile: ./container/web/Dockerfile
+    container_name: web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src/k-ryouri-gacha/:/usr/src/k-ryouri-gacha
+      - ./container/web/sampleSettings:/usr/src/sampleSettings
+    environment:
+      - WATCHPACK_POLLING=true
+    tty: true

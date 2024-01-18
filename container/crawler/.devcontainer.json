@@ -1,0 +1,18 @@
+{
+    "name": "python",
+    "dockerComposeFile": "../../compose.yaml",
+    "service": "python",
+    "workspaceFolder": "/usr/src/",
+    "shutdownAction": "stopCompose",
+    "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "KevinRose.vsc-python-indent",
+        "njpwerner.autodocstring",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "PKief.material-icon-theme",
+        "christian-kohler.path-intellisense",
+        "chrmarti.regex",
+        "Codeium.codeium"
+    ]
+}

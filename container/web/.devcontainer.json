@@ -1,0 +1,21 @@
+{
+    "name": "react",
+    "dockerComposeFile": "../../compose.yaml",
+    "service": "react",
+    "workspaceFolder": "/usr/src/",
+    "shutdownAction": "stopCompose",
+    "extensions": [
+        "formulahendry.auto-rename-tag",
+        "pranaygp.vscode-css-peek",
+        "jzmstrjp.color-the-tag-name",
+        "smelukov.vscode-csstree",
+        "Zignd.html-css-class-completion",
+        "AntiAntiSepticeye.vscode-color-picker",
+        "kisstkondoros.vscode-gutter-preview",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "PKief.material-icon-theme",
+        "christian-kohler.path-intellisense",
+        "chrmarti.regex",
+        "Codeium.codeium"
+    ]
+}
