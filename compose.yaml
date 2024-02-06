@@ -45,7 +45,7 @@ services:
       - "8080:80"
     volumes:
       - ./src/k-ryouri-gacha/:/usr/src/k-ryouri-gacha
-      - ./container/web/sampleSettings:/usr/src/sampleSettings
+      - ./container/web/sample-settings:/usr/src/sample-settings
     environment:
       - WATCHPACK_POLLING=true
     tty: true
